@@ -11,9 +11,9 @@
  * 
  */
 get_header(); ?>
-<div class="container">
-  <div class="col-md-12">
-    <section class="jumbotron" style="background-image: url('<?php echo CFS()->get( 'jumbotron_img' );?>')">
+<section class="jumbotron" style="background-image: url('<?php echo CFS()->get( 'jumbotron_img' );?>')">
+  <div class="container">
+    <div class="col-md-12">
      
        <h1><?php echo CFS()->get( 'jumbotron_title' );?></h1>
        <p>
@@ -25,10 +25,10 @@ get_header(); ?>
         <a href="<?php echo get_permalink( get_page_by_title( 'About us' ) ) ; ?>" title="Learn more about the YHGMC" class="btn btn-primary btn-lg">Learn more</a>
       </p>
 
-    </section>
+    </div>
   </div>
-</div>
-
+</section>
+  
 <?php
 $featured_pages_published = CFS()->get( 'feature_published' );
 if ( $featured_pages_published ) {;?>

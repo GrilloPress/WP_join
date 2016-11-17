@@ -82,7 +82,7 @@
 
 #site-header {
   
-  background-color: white;
+  background-color: $brand-primary;
   
 }
 
@@ -115,7 +115,7 @@
 // ENSURE NAVBAR BRAND TITLE DOESN'T SCRUNCH UP, OVERLAP OR BREAK INTO A NEW LINE
 .navbar-brand {
   
-  padding: 42px 15px;
+  padding: 12px 15px;
   height: inherit;
   font-weight: 700;
   

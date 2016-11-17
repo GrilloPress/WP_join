@@ -45,14 +45,14 @@
       <div id="site-header">
         <div class="container">
           <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-7">
               <a class="navbar-brand hidden-xs" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>">
                 <img class="" width="250" src="<?php echo get_template_directory_uri() . "/images/proud-five-logos-white.png"; ?>">
               </a>
               
             </div>
-            <div class="col-md-4">
-              <a title="<?php bloginfo('name'); ?>" href="<?php echo home_url(); ?>">
+            <div class="col-md-5">
+              <a title="Sheffield Teaching Hospitals NHS Foundation Trust main website" target="_blank" href="http://www.sth.nhs.uk/">
                 <img class="navbar-brand img-logo img-responsive" src="<?php echo get_template_directory_uri() . "/images/STHFT_white_transparent.png"; ?>">
               </a>
             </div>

@@ -18,7 +18,7 @@ $gray-dark:              darken($gray-base, 2%)  ; // #333
 // $gray-light:             lighten($gray-base, 46.7%) // #777
 // $gray-lighter:           lighten($gray-base, 93.5%) // #eee
 
-$brand-primary:        #006db8; // #18bc9c; // #337ab7
+$brand-primary:        #16388b; // #18bc9c; // #337ab7
 $brand-success:        #277691;
 $brand-info:           #007e5a;
 $brand-warning:        #6d1d61;
@@ -66,8 +66,8 @@ $font-size-base:          17px;
 // $font-size-large:         ceil(($font-size-base * 1.25)) // ~18px
 // $font-size-small:         ceil(($font-size-base * 0.85)) // ~12px
 
-// $font-size-h1:            floor(($font-size-base * 2.6)) // ~36px
-// $font-size-h2:            floor(($font-size-base * 2.15)) // ~30px
+$font-size-h1:            floor(($font-size-base * 2.0)); // ~36px
+$font-size-h2:            floor(($font-size-base * 1.85)); // ~30px
 $font-size-h3:            ceil(($font-size-base * 1.7)); // ~24px
 $font-size-h4:            ceil(($font-size-base * 1.25)); // ~18px
 // $font-size-h5:            $font-size-base
@@ -383,7 +383,7 @@ $navbar-border-radius:             0;
 // $navbar-collapse-max-height:       340px
 
 $navbar-default-color:             white;
-$navbar-default-bg:                #00adef;
+$navbar-default-bg:                $brand-primary;
 $navbar-default-border:            transparent;
 
 // Navbar links
@@ -504,7 +504,7 @@ $navbar-default-toggle-border-color:       transparent;
 
 // $jumbotron-padding:              30px
 $jumbotron-color:                white;
-$jumbotron-bg:                   desaturate( $brand-primary, 45%);
+$jumbotron-bg:                   $brand-primary;
 // $jumbotron-heading-color:        inherit
 // $jumbotron-font-size:            ceil(($font-size-base * 1.5))
 // $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5))
@@ -735,8 +735,8 @@ $panel-border-radius:         0;
 // $panel-default-heading-bg:    #f5f5f5
 
 // $panel-primary-text:          #fff
-$panel-primary-border:        desaturate($brand-primary, 5%);
-$panel-primary-heading-bg:    $panel-primary-border;
+$panel-primary-border:        transparent;
+$panel-primary-heading-bg:    desaturate($brand-primary, 5%);
 
 // $panel-success-text:          $state-success-text
 // $panel-success-border:        $state-success-border
