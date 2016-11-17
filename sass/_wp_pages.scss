@@ -1,0 +1,151 @@
+.page-feature-block {
+  
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 4em;
+  
+}
+
+.front-page-featured-reasons {
+  
+  margin-top: 2em;
+  margin-bottom: 4em;
+  
+  .media {
+    
+    padding: 2em 0;
+    
+  }
+  
+}
+
+.front-page-sponsors {
+  
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 4em;
+  
+  h2 {
+    
+    margin-bottom: 2em;
+    
+  }
+  
+}
+
+// PAGE HEADER
+
+.entry-title {
+    
+    background-color: desaturate( #224cb2, 10% );
+    padding: 10px 12px;
+    color: #ffffff;
+  
+  a {
+    
+    color: $brand-primary;
+    
+    &:hover {
+      
+      color: darken($brand-primary, 5%);
+      
+    }
+    
+  }
+    
+}
+
+// Media object styles in pages
+
+.media-body {
+  
+  h3 {
+    
+    margin-top: 0px;
+    
+  }
+  
+}
+
+// BREADCRUMBS
+
+.breadcrumb-container {
+  
+  margin-top: -24px;
+  padding-top: 1.5em;
+  background-color: $brand-gray;
+  
+}
+
+.breadcrumb {
+  
+  font-weight: 700;
+  padding-left: 0;
+  
+}
+
+// CATEGORY.PHP
+
+.category-title {
+
+  // padding-top: 20px;
+  margin-top: 0;
+  
+}
+
+.category-article {
+  
+  margin: 1em 0;
+  padding-right: 5px;
+  
+  img {
+    
+    
+    
+  }
+  
+  // REMOVE ENTRY FOOTER BORDER IN CATEGORY CARD
+  
+  .entry-footer {
+    
+    border: none;
+    padding: 0;
+    margin: 0;
+    
+    .entry-meta {
+    
+      font-size: 12px;
+
+    }
+    
+  }
+  
+}
+
+// ENTRY FOOTER
+
+.entry-footer {
+  
+  // border-top: 1px solid darken( $brand-gray, 5% );
+  border-top: none;
+  // padding-top: 1em;
+  // margin-top: 1em;
+  
+}
+
+// BLOCKQUOTE
+
+blockquote {
+  
+  border-color: $brand-primary;
+  background-color: $brand-gray;
+  
+}
+
+//
+
+.card-marketing {
+  
+  padding: 0.5em;
+  
+}

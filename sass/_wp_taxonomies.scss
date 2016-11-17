@@ -1,0 +1,49 @@
+.tag-list a {
+  
+  @extend .label;
+  background-color: lighten($brand-info, 5%);
+    
+}
+
+.tags-links {
+  
+  margin: 5px 0;
+  
+}
+
+h1.page-title {
+  
+    background-color: $brand-primary;
+    padding: 10px 12px;
+    color: #ffffff;
+  
+}
+
+.category-label {
+  
+  position: absolute;
+  top: 2em;
+  padding-left: 20px;
+  padding-right: 10px;
+  font-weight: 700;
+  background-color: $brand-primary;
+  color: white;
+  font-size: 1em;
+
+  .label-news {
+    
+  }
+  
+}
+
+.label-patient-story {
+    
+    background-color: $brand-success;
+    
+  }
+
+.page-category-card .category-title {
+  
+  margin-top: 0.5em;
+  
+}
