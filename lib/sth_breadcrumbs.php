@@ -13,10 +13,12 @@ if ( ! function_exists( 'sth_breadcrumbs' ) ) :
   function sth_breadcrumbs() {
 
       // Settings
-      $separator          = '&gt;';
-      $breadcrums_id      = 'breadcrumbs';
-      $breadcrums_class   = 'breadcrumbs';
-      $home_title         = 'Home';
+    $separator          = '&gt;';
+    $breadcrums_id      = 'breadcrumbs';
+    $breadcrums_class   = 'breadcrumbs';
+    $home_title         = 'Home';
+    $class = "";
+    $custom_taxonomy = "";
 
       // If you have any custom post types with custom taxonomies, put the taxonomy name below (e.g. product_cat)
       // $custom_taxonomy    = 'product_cat';
@@ -28,7 +30,7 @@ if ( ! function_exists( 'sth_breadcrumbs' ) ) :
       if ( !is_front_page() ) {
 
           // Build the breadcrums
-          echo '<ul id="' . $breadcrums_id . '" class="breadcrumb ' . $breadcrums_class . '">';
+          echo '<ul id="' . $breadcrums_id . '" class="breadcrumb' . $class . '">';
 
           // Home page
           echo '<li class="item-home"><a class="bread-link bread-home" href="' . get_home_url() . '" title="' . $home_title . '">' . $home_title . '</a></li>';
@@ -77,7 +79,8 @@ if ( ! function_exists( 'sth_breadcrumbs' ) ) :
               $category = get_the_category();
 
               // Get last category post is in
-              $last_category = end(array_values($category));
+              $last_category_placeholder = array_values($category);
+              $last_category = end( $last_category_placeholder );
 
               // Get parent any categories and create array
               $get_cat_parents = rtrim(get_category_parents($last_category->term_id, true, ','),',');
