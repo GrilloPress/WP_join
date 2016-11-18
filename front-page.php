@@ -233,8 +233,8 @@ if ( $featurette_published ) {
         // WP_Query arguments
         $col_args = array (
           
-          'category_name' => 'news',
-          'posts_per_page' => 3
+          'category_name' => 'meet-our-staff',
+          'posts_per_page' => 4,
           
         );
    
@@ -246,7 +246,7 @@ if ( $featurette_published ) {
           <!-- the loop -->
           <?php while ( $cat_query->have_posts() ) : $cat_query->the_post(); ?>
           
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div class="page-category-card">
             <?php if ( has_post_thumbnail() ) :?>
                 <a href="<?php the_permalink() ;?>">
@@ -259,7 +259,7 @@ if ( $featurette_published ) {
               <?php endif ;?>
 
             <div class="category-label">
-              News
+              Staff profile
             </div>
               <?php the_title( sprintf( '<h3 class="category-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
               <?php the_excerpt(); ?>
