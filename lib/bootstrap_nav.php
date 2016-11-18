@@ -5,6 +5,20 @@
  * @package sth
  */
 
+function wp_bootstrap_micro_nav() {
+  // Display the WordPress menu if available
+  wp_nav_menu( 
+    array( 
+      'menu' => 'micro_nav', /* menu name */
+      'menu_class' => 'nav navbar-nav navbar-micro',
+      'theme_location' => 'micro_nav', /* where in the theme it's assigned */
+      'container' => 'false', /* container class */
+      'fallback_cb' => 'wp_bootstrap_main_nav_fallback', /* menu fallback */
+      'walker' => new Bootstrap_walker()
+    )
+  );
+}
+
 function wp_bootstrap_main_nav() {
   // Display the WordPress menu if available
   wp_nav_menu( 

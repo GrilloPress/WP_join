@@ -74,7 +74,17 @@
 					</div>
 
 					<div class="collapse navbar-collapse navbar-responsive-collapse">
-						<?php wp_bootstrap_main_nav(); ?>
+            <div class="row">
+              <div class="col-md-12">
+                <?php wp_bootstrap_micro_nav(); ?>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-12">
+                <?php wp_bootstrap_main_nav(); ?>
+              </div>
+            </div>
 					</div>
 
 				</div> <!-- end .container -->

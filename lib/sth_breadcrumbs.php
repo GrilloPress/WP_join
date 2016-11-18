@@ -19,6 +19,7 @@ if ( ! function_exists( 'sth_breadcrumbs' ) ) :
     $home_title         = 'Home';
     $class = "";
     $custom_taxonomy = "";
+    $parents = "";
 
       // If you have any custom post types with custom taxonomies, put the taxonomy name below (e.g. product_cat)
       // $custom_taxonomy    = 'product_cat';
