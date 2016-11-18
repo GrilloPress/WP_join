@@ -198,3 +198,11 @@ nav.navigation {
   }
   
 }
+
+.navbar-micro {
+  
+  @media screen and (min-width: $screen-sm) {
+    
+    font-size: 14px;
+  }
+}
