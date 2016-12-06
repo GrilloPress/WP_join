@@ -128,9 +128,9 @@
   @media screen and (max-width: $screen-xs) {
     
     font-size: 14px;
-    line-height: 1em;
+    line-height: 24px;
     padding: 10px;
-    max-width: 70%;
+    max-width: 100%;
     
   }
 }
@@ -205,4 +205,30 @@ nav.navigation {
     
     font-size: 14px;
   }
+}
+
+// MAIN MENU STYLE CHANGES
+
+ul#menu-main {
+  
+  background-color: lighten($navbar-default-bg, 6.5%);
+  border-radius: 7px 7px 0 0;
+  width: 100%;
+  
+  @media screen and (max-width: $screen-sm) {
+    
+    background-color: inherit;
+    border-radius: 0;
+    width: inherit;
+    
+  }
+  
+}
+
+// 
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  
+  text-decoration: underline;
+  
 }
