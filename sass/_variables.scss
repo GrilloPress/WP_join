@@ -26,6 +26,7 @@ $brand-danger:         #b61e53;
 $brand-vibrant:        #b10dc9; // bright purple pinky thing
 $brand-gray:           #f7f7f7;
 $brand-grey:           $brand-gray;
+$brand-light-primary:  #d9eaf7;
 
 // NHS Blue: #006db8
 // Jelly bean blue: #277691
@@ -503,8 +504,8 @@ $navbar-default-toggle-border-color:       transparent;
 //##
 
 // $jumbotron-padding:              30px
-$jumbotron-color:                white;
-$jumbotron-bg:                   $brand-primary;
+// $jumbotron-color:                white;
+$jumbotron-bg:                   $brand-light-primary;
 // $jumbotron-heading-color:        inherit
 // $jumbotron-font-size:            ceil(($font-size-base * 1.5))
 // $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5))
