@@ -11,9 +11,13 @@
  * 
  */
 get_header(); ?>
-<section class="jumbotron" style="background-image: url('<?php echo CFS()->get( 'jumbotron_img' );?>')">
+<section class="jumbotron" 
+         <?php if (!empty(CFS()->get( 'jumbotron_img' ))) :?>
+             style="background-image: url('<?php echo CFS()->get( 'jumbotron_img' );?>')"
+             <?php endif ;?>
+             >
   <div class="container">
-    <div class="col-md-12">
+    <div class="col-md-8">
      
        <h1><?php echo CFS()->get( 'jumbotron_title' );?></h1>
        <p>
@@ -21,10 +25,15 @@ get_header(); ?>
        </p>
        <p>
         <?php $jbo_link = CFS()->get( 'jumbotron_btn' );?>
-        <a class="btn btn-warning btn-lg" href="<?php echo get_permalink( get_page_by_title( 'Getting involved' ) ) ; ?>" title="<?php echo $jbo_link["text"];?>" target="<?php echo $jbo_link["target"];?>" role="button"><?php echo $jbo_link["text"];?></a>
-        <a href="<?php echo get_permalink( get_page_by_title( 'About us' ) ) ; ?>" title="Learn more about the YHGMC" class="btn btn-primary btn-lg">Learn more</a>
+        <a class="btn btn-warning btn-lg" href="<?php echo get_permalink( get_page_by_title( 'Current vacancies' ) ) ; ?>" title="Current vacancies" target="" role="button">Current vacancies</a>
+        <a href="<?php echo get_permalink( get_page_by_title( 'About us' ) ) ; ?>" title="<?php echo get_bloginfo('description'); ?>" class="btn btn-primary btn-lg">Learn more</a>
       </p>
 
+    </div>
+    <div class="col-md-4">
+      <div class="jumbtron-sidebar">
+        
+      </div>
     </div>
   </div>
 </section>
