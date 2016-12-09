@@ -8,14 +8,15 @@
  */
 
 get_header(); ?>
+<section class="breadcrumb-container breadcrumb-container-vacancies">
+  <div class="container">
+    <div class="col-md-12">
+      <?php sth_breadcrumbs(); ?>
+    </div>
+  </div>
+</section>
 
 	 <div id="primary" class="container">
-     <div class="row">
-      <div class="col-md-12">
-        <?php sth_breadcrumbs(); ?>
-      </div>
-     </div>
-     
     <div class="row">
       
       

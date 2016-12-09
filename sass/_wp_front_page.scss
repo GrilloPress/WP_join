@@ -15,8 +15,11 @@
   }
   
   @media screen and (max-width: $screen-xs) {
-    
-    // Make the jumbotron full width on mobile screens
+
+    h1 {
+      // Make jumbotron h1 bigger on small screens
+      font-size: 50px;
+    }     
     
   }
   
