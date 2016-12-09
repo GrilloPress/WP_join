@@ -4,13 +4,14 @@
   background-repeat: no-repeat;
   // background-position: 32% 0%;
   background-size: cover;
+  color: white;
   
   h1 {
     
     font-weight: 400;
     // background-color: $brand-info;
     padding-left: 5px;
-    color: $brand-warning;
+    color: white; // $brand-warning;
     
   }
   
@@ -20,6 +21,12 @@
       // Make jumbotron h1 bigger on small screens
       font-size: 50px;
     }     
+    
+  }
+  
+  .jumbotron-sidebar {
+    
+    padding: 3em 1em;
     
   }
   
@@ -36,5 +43,17 @@
 .page-category-card {
   
   padding: 1em;
+  
+}
+
+.home {
+  
+  h2 {
+    
+    font-size: floor(($font-size-base * 2.5));;
+    text-align: center;
+    margin-bottom: 1em;
+    
+  }
   
 }

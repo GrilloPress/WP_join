@@ -505,7 +505,7 @@ $navbar-default-toggle-border-color:       transparent;
 
 // $jumbotron-padding:              30px
 // $jumbotron-color:                white;
-$jumbotron-bg:                   $brand-light-primary;
+$jumbotron-bg:                   lighten($navbar-default-bg, 6.5%);
 // $jumbotron-heading-color:        inherit
 // $jumbotron-font-size:            ceil(($font-size-base * 1.5))
 // $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5))

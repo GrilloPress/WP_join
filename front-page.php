@@ -17,7 +17,7 @@ get_header(); ?>
              <?php endif ;?>
              >
   <div class="container">
-    <div class="col-md-8">
+    <div class="col-md-6">
      
        <h1><?php echo CFS()->get( 'jumbotron_title' );?></h1>
        <p>
@@ -30,9 +30,9 @@ get_header(); ?>
       </p>
 
     </div>
-    <div class="col-md-4">
-      <div class="jumbtron-sidebar">
-        
+    <div class="col-md-6">
+      <div class="jumbotron-sidebar">
+        <iframe width="100%" height="300" src="https://www.youtube.com/embed/kQT98jP37g8?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -47,11 +47,11 @@ if ( $featured_pages_published ) {;?>
         
         <?php
         
-      $featured_pages = array("one", "two", "three", "four");
+      $featured_pages = array("one", "two", "three");
       foreach ($featured_pages as $fp) { ;?>
       
       
-      <div class="col-md-3">
+      <div class="col-md-4">
         <div class="page-feature-block">
           
           <?php $image_id = CFS()->get( 'feature_image_' . $fp );
