@@ -41,7 +41,7 @@ get_header(); ?>
 <?php
 $featured_pages_published = CFS()->get( 'feature_published' );
 if ( $featured_pages_published ) {;?>
-<section class="page-feature-container">
+<section class="page-feature-container under-jumbotron">
   <div class="container">
     <div class="row">
         
@@ -51,7 +51,7 @@ if ( $featured_pages_published ) {;?>
       foreach ($featured_pages as $fp) { ;?>
       
       
-      <div class="col-md-3">
+      <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="page-feature-block">
           
           <a href="<?php echo get_permalink( get_page_by_title( CFS()->get('feature_link_' . $fp) ) ) ;?>">
