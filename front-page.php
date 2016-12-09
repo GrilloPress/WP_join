@@ -31,7 +31,7 @@ get_header(); ?>
 
     </div>
     <div class="col-md-6">
-      <div class="jumbotron-sidebar">
+      <div class="jumbotron-sidebar hidden-xs">
         <iframe width="100%" height="300" src="https://www.youtube.com/embed/kQT98jP37g8?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
@@ -47,24 +47,21 @@ if ( $featured_pages_published ) {;?>
         
         <?php
         
-      $featured_pages = array("one", "two", "three");
+      $featured_pages = array("one", "two", "three", "four");
       foreach ($featured_pages as $fp) { ;?>
       
       
-      <div class="col-md-4">
+      <div class="col-md-3">
         <div class="page-feature-block">
           
-          <?php $image_id = CFS()->get( 'feature_image_' . $fp );
-          echo wp_get_attachment_image( $image_id, 'thumbnail', "", array( "class" => "img-marketing" ) );?>
-          
+          <a href="<?php echo get_permalink( get_page_by_title( CFS()->get('feature_link_' . $fp) ) ) ;?>">
+            <?php $image_id = CFS()->get( 'feature_image_' . $fp );
+            echo wp_get_attachment_image( $image_id, 'full', "", array( "class" => "img-marketing" ) );?>
+          </a>
+
           <h4><?php echo CFS()->get('feature_title_' . $fp); ?></h4>
 
           <?php echo CFS()->get('feature_body_' . $fp); ?>
-
-          <?php $fb_link = CFS()->get( 'feature_link_' . $fp );?>
-          <p>
-            <a class="btn btn-primary" href="<?php echo $fb_link["url"];?>" title="<?php echo $fb_link["text"];?>" target="<?php echo $fb_link["target"];?>" role="button"><?php echo $fb_link["text"];?></a>
-          </p>
           
         </div>
       </div>
