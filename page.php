@@ -33,7 +33,7 @@ get_header(); ?>
           <div class="row">
             <div class="col-md-6">
               <div class="page-service-marketing-left">
-                <?php echo CFS()->get('marketing_section_left'); ?>
+                <?php echo CFS()->get('marketing_section_left');?>
               </div>
             </div>
 

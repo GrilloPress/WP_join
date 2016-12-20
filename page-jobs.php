@@ -240,7 +240,6 @@ get_header(); ?>
                 <div class="row">
                   
                   <?php echo sth_job_feed();?>
-                 <?php // delete_transient( 'special_query_results' ); ?>
                 </div>
 
               </div>

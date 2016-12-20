@@ -9,9 +9,9 @@
  * 
  * 
 */ 
+require 'simple_html_dom.php'; // includes the library
+
 function sth_job_feed() {
-  
-  require 'simple_html_dom.php'; // includes the library
   
   // Get any existing copy of our transient data
   if ( false === ( $special_query_results = get_transient( 'special_query_results' ) ) ) {
