@@ -28,7 +28,9 @@
               echo wp_get_attachment_image( $rp_image_id, 'full', "", array( "class" => "img-marketing" ) );?>
               </a>
 
-              <h4><?php echo CFS()->get('rpb_heading_' . $rp); ?></h4>
+              <a href="<?php echo get_permalink( get_page_by_title( CFS()->get('rpb_link_' . $rp) ) ) ;?>">
+                <h4><?php echo CFS()->get('rpb_heading_' . $rp); ?></h4>
+              </a>
           
             </div>
           </div>
