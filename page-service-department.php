@@ -72,6 +72,6 @@ get_header(); ?>
 
 <?php get_template_part( 'template-parts/landing-page/custom', 'feed' ); ?>
 
-<?php get_template_part( 'template-parts/content', 'marketing-columns' ); ?>
+<?php get_template_part( 'template-parts/global/content', 'marketing-columns' ); ?>
 
 <?php get_footer(); ?>

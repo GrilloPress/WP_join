@@ -15,10 +15,20 @@ if ( $marketing_blocks_published ) {;?>
       $marketing_blocks = array("one", "two", "three", "four");
       foreach ($marketing_blocks as $mb) { ;?>
       
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="card-marketing">
           <?php $marketing_image_id = CFS()->get( 'marketing_image_' . $mb );
-            echo wp_get_attachment_image( $marketing_image_id, array('300', '9999'), "", array( "class" => "img-marketing" ) );?>
+            if (!empty( CFS()->get( 'marketing_link_' . $mb ) ) ) {;?>
+          
+            <a href="<?php echo esc_url( CFS()->get('marketing_link_' . $mb) ) ;?>" title="<?php echo CFS()->get('marketing_title_' . $mb) ;?>">
+              <?php echo wp_get_attachment_image( $marketing_image_id, array('300', '9999'), "", array( "class" => "img-marketing" ) );?>
+            </a>
+          
+            <?php } else {
+              
+              echo wp_get_attachment_image( $marketing_image_id, array('300', '9999'), "", array( "class" => "img-marketing" ) );
+              
+            }?>
             
             <h4 class="media-heading"><?php echo CFS()->get('marketing_title_' . $mb); ?></h4>
             <?php echo CFS()->get('marketing_body_' . $mb); ?>
@@ -33,11 +43,21 @@ if ( $marketing_blocks_published ) {;?>
       $marketing_blocks = array("five", "six", "seven", "eight");
       foreach ($marketing_blocks as $mb) { ;?>
       
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="card-marketing">
           <?php $marketing_image_id = CFS()->get( 'marketing_image_' . $mb );
-            echo wp_get_attachment_image( $marketing_image_id, array('300', '9999'), "", array( "class" => "img-marketing" ) );?>
-        
+            if (!empty( CFS()->get( 'marketing_link_' . $mb ) ) ) {;?>
+          
+            <a href="<?php echo esc_url( CFS()->get('marketing_link_' . $mb) ) ;?>" title="<?php echo CFS()->get('marketing_title_' . $mb) ;?>">
+              <?php echo wp_get_attachment_image( $marketing_image_id, array('300', '9999'), "", array( "class" => "img-marketing" ) );?>
+            </a>
+          
+            <?php } else {
+              
+              echo wp_get_attachment_image( $marketing_image_id, array('300', '9999'), "", array( "class" => "img-marketing" ) );
+              
+            }?>
+            
             <h4 class="media-heading"><?php echo CFS()->get('marketing_title_' . $mb); ?></h4>
             <?php echo CFS()->get('marketing_body_' . $mb); ?>
         </div>

@@ -11,68 +11,8 @@
  * 
  */
 get_header(); ?>
-<section class="jumbotron" 
-         <?php if (!empty(CFS()->get( 'jumbotron_img' ))) :?>
-             style="background-image: url('<?php echo CFS()->get( 'jumbotron_img' );?>')"
-             <?php endif ;?>
-             >
-  <div class="container">
-    <div class="col-md-6">
-     
-       <h1><?php echo CFS()->get( 'jumbotron_title' );?></h1>
-       <p>
-        <?php echo CFS()->get( 'jumbotron_subtitle' );?>
-       </p>
-       <p>
-        <?php $jbo_link = CFS()->get( 'jumbotron_btn' );?>
-        <a class="btn btn-warning btn-lg" href="<?php echo get_permalink( get_page_by_title( 'Current vacancies' ) ) ; ?>" title="Current vacancies" target="" role="button">Current vacancies</a>
-        <a href="<?php echo get_permalink( get_page_by_title( 'About us' ) ) ; ?>" title="<?php echo get_bloginfo('description'); ?>" class="btn btn-primary btn-lg">Learn more</a>
-      </p>
-
-    </div>
-    <div class="col-md-6">
-      <div class="jumbotron-sidebar hidden-xs">
-        <iframe width="100%" height="300" src="https://www.youtube.com/embed/kQT98jP37g8?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-  
-<?php
-$featured_pages_published = CFS()->get( 'feature_published' );
-if ( $featured_pages_published ) {;?>
-<section class="page-feature-container under-jumbotron">
-  <div class="container">
-    <div class="row">
-        
-        <?php
-        
-      $featured_pages = array("one", "two", "three", "four");
-      foreach ($featured_pages as $fp) { ;?>
-      
-      
-      <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="page-feature-block">
-          
-          <a href="<?php echo get_permalink( get_page_by_title( CFS()->get('feature_link_' . $fp) ) ) ;?>">
-            <?php $image_id = CFS()->get( 'feature_image_' . $fp );
-            echo wp_get_attachment_image( $image_id, 'full', "", array( "class" => "img-marketing" ) );?>
-          </a>
-
-          <h4><?php echo CFS()->get('feature_title_' . $fp); ?></h4>
-
-          <?php echo CFS()->get('feature_body_' . $fp); ?>
-          
-        </div>
-      </div>
-      
-      <?php } reset($featured_pages);?>
-      
-      
-    </div>
-  </div>
-</section>
-<?php };?>
+<?php get_template_part( 'template-parts/front-page/custom', 'jumbotron' ); ?>  
+<?php get_template_part( 'template-parts/landing-page/custom', 'feature' ); ?>
 
 <section id="primary" class="page-service-marketing-container">
   <div class="container">
@@ -127,7 +67,7 @@ if ( $featured_pages_published ) {;?>
   </div>
 </section>
 
-<?php get_template_part( 'template-parts/content', 'marketing-columns' ); ?>
+<?php get_template_part( 'template-parts/global/content', 'marketing-columns' ); ?>
 
 <section class="page-category-post-list">
   <div class="container">  
@@ -190,11 +130,8 @@ if ( $featured_pages_published ) {;?>
             <h3 class="category-title"><a href="#" rel="bookmark">See all</a></h3>
           </div>
       </div>
-      
-      
-      </div>
+    </div>
     
-
   </div>
 </section>
 

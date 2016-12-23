@@ -238,7 +238,6 @@ get_header(); ?>
                 <p><span class='job-counter'><span class='job-count'></span> Jobs Returned </span></p>
                 
                 <div class="row">
-                  
                   <?php echo sth_job_feed();?>
                 </div>
 
