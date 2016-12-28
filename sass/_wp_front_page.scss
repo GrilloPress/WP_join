@@ -57,3 +57,61 @@
   }
   
 }
+
+// Front page grey box for meet the team featured posts
+
+.page-category-post-list {
+  
+  margin-bottom: -3em;
+  background-color: $brand-grey;
+  padding: 2em 1em;
+  
+  .page-category-card {
+    
+    padding: 0.5em;
+    background-color: darken($brand-grey, 5%);
+    margin-bottom: 1em;
+    
+    img {
+      
+      margin-bottom: 1em;
+      
+    }
+    
+    
+    
+  }
+  
+  .page-category-card .category-title {
+  
+    margin-top: 0.5em;
+    text-align: center;
+    
+    a {
+      
+      color: inherit;
+      text-decoration: underline;
+      
+    }
+  
+  }
+  
+  .page-category-footer {
+  
+    text-align: center;
+    padding: 1em 0;
+    
+    a {
+      
+      color: inherit;
+      text-decoration: underline;
+      font-size: 1.3em;
+      font-weight: 700;
+      
+    }
+
+  }
+  
+}
+
+//
