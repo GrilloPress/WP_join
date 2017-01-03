@@ -24,7 +24,7 @@
     </div>
     <div class="col-md-6">
       <div class="jumbotron-sidebar hidden-xs">
-        <iframe width="100%" height="300" src="https://www.youtube.com/embed/kQT98jP37g8?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="300" src="https://www.youtube.com/embed/kQT98jP37g8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </div>
