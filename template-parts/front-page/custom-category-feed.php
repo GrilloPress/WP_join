@@ -46,6 +46,9 @@
               <?php endif ;?>
             <div class="page-category-card-inner">
               <?php the_title( sprintf( '<h4 class="category-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
+              <?php if (!empty(CFS()->get( 'staff_job_title' ))) :?>
+                <p><?php echo CFS()->get( 'staff_job_title' );?></p>
+              <?php endif ;?>
             </div>
               
           </div>
