@@ -70,6 +70,8 @@ get_header(); ?>
 	  </div><!-- #primary -->
   </div>
 
+<?php get_template_part( 'template-parts/landing-page/custom', 'snapshots' ); ?>
+
 <?php get_template_part( 'template-parts/landing-page/custom', 'feed' ); ?>
 
 <?php get_template_part( 'template-parts/global/content', 'marketing-columns' ); ?>
