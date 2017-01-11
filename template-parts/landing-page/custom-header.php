@@ -4,14 +4,16 @@
  * To change this template use Tools | Templates.
  */
 ?>
-<section class="jumbotron jumbotron-marketing">
+<section class="jumbotron jumbotron-marketing" 
+         <?php if (!empty(CFS()->get( 'mj_background_img' ))) :?>
+         style="background-image: url('<?php echo CFS()->get( 'mj_background_img' );?>')"
+         <?php endif ;?>
+         >
   <div class="container">
     <div class="col-md-6">
      
        <h1><?php echo CFS()->get( 'mj_title' );?></h1>
-       <p>
         <?php echo CFS()->get( 'mj_subtitle' );?>
-       </p>
 
     </div>
     <div class="col-md-6">

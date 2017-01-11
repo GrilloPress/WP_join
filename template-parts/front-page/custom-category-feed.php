@@ -29,10 +29,17 @@
         $cat_query = new WP_Query( $col_args ); ?>
 
         <?php if ( $cat_query->have_posts() ) : ?>
+        <?php $cat_counter = 0 ;?>
+      
 
           <!-- the loop -->
-          <?php while ( $cat_query->have_posts() ) : $cat_query->the_post(); ?>
-          
+       <?php while ( $cat_query->have_posts() ) : $cat_query->the_post();
+       if ( $cat_counter % 3 == 0  ){
+        
+        echo "<div class='col-md-12'></div>";
+  
+      }?>
+    
         <article id="post-<?php the_ID(); ?>" class="col-md-4 col-sm-6 col-xs-12">
           <div class="page-category-card">
             <?php if ( has_post_thumbnail() ) :?>
@@ -47,13 +54,13 @@
             <div class="page-category-card-inner">
               <?php the_title( sprintf( '<h4 class="category-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
               <?php if (!empty(CFS()->get( 'staff_job_title' ))) :?>
-                <p><?php echo CFS()->get( 'staff_job_title' );?></p>
+                   <a href="<?php the_permalink() ;?>"><?php echo CFS()->get( 'staff_job_title' );?></a>
               <?php endif ;?>
             </div>
               
           </div>
       </article>
-        
+          <?php $cat_counter++ ;?>
           <?php endwhile; ?>
           <!-- end of the loop -->
 

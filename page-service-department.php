@@ -19,7 +19,7 @@ get_header(); ?>
 <div id="primary" class="container">
      
     <div class="row">
-      <main id="main" class="col-md-7 col-sm-8" role="main">
+      <main id="main" class="col-md-12" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?> 
         
@@ -63,17 +63,13 @@ get_header(); ?>
 
 		  </main><!-- #main -->
       
-      <aside class="col-md-4 col-md-offset-1 col-sm-4">
-        <?php get_sidebar(); ?>
-      </aside>
-      
 	  </div><!-- #primary -->
   </div>
+
+<?php get_template_part( 'template-parts/global/custom', 'marketing-columns' ); ?>
 
 <?php get_template_part( 'template-parts/landing-page/custom', 'snapshots' ); ?>
 
 <?php get_template_part( 'template-parts/landing-page/custom', 'feed' ); ?>
-
-<?php get_template_part( 'template-parts/global/content', 'marketing-columns' ); ?>
 
 <?php get_footer(); ?>

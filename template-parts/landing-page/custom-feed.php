@@ -6,6 +6,11 @@ $custom_feed = CFS()->get( 'cp_feed_published' );
 if ( $custom_feed ){ ;?>
   <section class="page-category-post-list">
     <div class="container">  
+      
+      <div class="row">
+        <h2>Meet our team</h2>
+      </div>
+      
       <div class="row">
 
           <?php 
@@ -15,7 +20,7 @@ if ( $custom_feed ){ ;?>
           $col_args = array (
 
             'category_name' => 'meet-our-staff',
-            'posts_per_page' => 8,
+            'posts_per_page' => 4,
             'tag' => CFS()->get( 'cp_tag_name' ),
           );
 
@@ -39,11 +44,10 @@ if ( $custom_feed ){ ;?>
                   </a>
                 <?php endif ;?>
 
-              <div class="category-label">
-                Staff profile
-              </div>
-                <?php the_title( sprintf( '<h3 class="category-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
-                <?php the_excerpt(); ?>
+                <?php the_title( sprintf( '<h4 class="category-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
+                <?php if (!empty(CFS()->get( 'staff_job_title' ))) :?>
+                   <a href="<?php the_permalink() ;?>"><?php echo CFS()->get( 'staff_job_title' );?></a>
+                <?php endif ;?>
             </div>
         </div>
 
